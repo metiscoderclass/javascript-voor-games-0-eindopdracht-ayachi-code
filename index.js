@@ -4,5 +4,5 @@ function play() {
 
 
 function score() {
-  window.open('/score/')
+  window.open('/highscore/')
 }
