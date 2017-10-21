@@ -34,7 +34,6 @@ function Snake() {
       var pos = this.lengte[i];
       var d = dist(this.x, this.y, pos.x, pos.y);
       if (d < 1) {
-        this.score = 0;
         this.kansen += 1;
         this.kansenp.innerHTML = "pogingen " + this.kansen;
         if (this.kansen != 3) {
@@ -47,8 +46,7 @@ function Snake() {
   }
 
 this.bilal = function () {
-  if (this.kansen >= 2) {
-      console.log("Nu voor het echie")
+  if (this.kansen == 2) {
       this.scorenonthoud = localStorage.setItem("score", this.score);
   }
 }
