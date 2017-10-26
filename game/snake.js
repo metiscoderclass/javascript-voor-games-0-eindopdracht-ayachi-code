@@ -12,6 +12,7 @@ function Snake() {
   this.scorep = document.getElementById('scoren');
   this.scorenonthoud;
 
+
   this.eat = function(pos) {
     var d = dist(this.x, this.y, pos.x, pos.y);
     if (d < 1) {
@@ -23,6 +24,22 @@ function Snake() {
       return false;
     }
   }
+
+
+  this.eeteenspeciaalbal = function (pos) {
+    var d = dist(this.x,this.y,pos.x,pos.y);
+    if (d < 1) {
+      console.log("speciaal bal");
+      this.score += 10;
+      this.totaal++
+      this.scorep.innerHTML = "Score " + this.score;
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+
 
   this.dir = function(x, y) {
     this.xspeed = x;
