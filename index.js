@@ -6,3 +6,8 @@ function play() {
 function score() {
   window.open('/highscore/')
 }
+
+
+function info() {
+    window.open('/info/')
+}
