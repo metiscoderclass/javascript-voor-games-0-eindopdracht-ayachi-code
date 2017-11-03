@@ -1,16 +1,9 @@
 var pak = localStorage.getItem('score');
 var context = document.getElementById('ha');
 context.innerHTML = "Score " + pak;
-var gebruikers_input = document.getElementById('ka');
-
-
-var data = {
-  score: pak,
-  user: gebruikers_input
-};
-
-
-
+var naam = document.getElementById('naam').value;
+ 
+ 
 var config = {
 apiKey: "AIzaSyBbFafD2Q_PboZ2BL5bEBbVw_Gx3jrx7aE",
 authDomain: "snake-52dbc.firebaseapp.com",
@@ -25,18 +18,19 @@ var database = firebase.database();
 
 
 function voeg() {
-      var gebruikers_input = document.getElementById('ka').value;
+ var naam = document.getElementById('naam').value;
+  
+ 
       var data = {
         score: pak,
-        user: gebruikers_input
+        user: naam
       };
       var score = database.ref('gegevens').push(data);
+      
+      
+      
+      window.location.href = "/public/";
 
 
 }
 
-
-function restart()
-{
-  window.location.href = "/";
-}

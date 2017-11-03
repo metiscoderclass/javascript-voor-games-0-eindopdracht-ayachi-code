@@ -1,3 +1,11 @@
+<?php
+
+session_start();
+
+
+?>
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -13,8 +21,10 @@
 
 
 
+
+
     <center>
-  <h1>Welkom bij snake with bilal....</h1>
+  <h1><?php echo "Welkom ".$_SESSION["naam"];  ?> bij snake with bilal....</h1>
 
   <button class="mooi" onclick="play()">Play</button><br>
 
@@ -22,7 +32,11 @@
 
   <button class="score" onclick="report()" style="margin-top: 29px;">Report a bug</button><br>
 
-  <button class="score" onclick="info()" style="margin-top: 29px;">Hoe speel je</button>
+  <button class="score" onclick="info()" style="margin-top: 29px;">Hoe speel je</button><br>
+  
+  <button class="score" onclick="profiel()" style="margin-top: 29px;">mijn profiel</button>
+   
+  
 
 </center>
 
