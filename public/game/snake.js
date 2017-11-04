@@ -1,4 +1,3 @@
-
 function Snake() {
   this.x = 0;
   this.y = 0;
@@ -11,8 +10,31 @@ function Snake() {
   this.score = 0;
   this.scorep = document.getElementById('scoren');
   this.scorenonthoud;
+  this.unlockt1;
+  
 
 
+  var trofeeen = {
+    t1: false,
+    t2: false,
+    t3: false
+  };
+
+
+
+
+  this.trofee = function() {
+    if (this.score == 10) {
+      trofeeen.t1 = true;
+      localStorage.setItem("Trofee1",trofeeen.t1)
+      alert("Trofee")
+      this.score ++;
+      
+    }
+  }
+  
+  
+  
   this.eat = function(pos) {
     var d = dist(this.x, this.y, pos.x, pos.y);
     if (d < 1) {
@@ -45,7 +67,9 @@ function Snake() {
     this.xspeed = x;
     this.yspeed = y;
   }
-
+  
+  
+ 
   this.death = function() {
     for (var i = 0; i < this.lengte.length; i++) {
       var pos = this.lengte[i];

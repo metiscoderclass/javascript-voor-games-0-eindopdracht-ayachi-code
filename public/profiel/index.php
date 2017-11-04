@@ -51,6 +51,8 @@ session_start();
     <h3 id="hoogste_scoren">hoogste Scoren:</h3>
     </center>
 
+  
+
 
     <table>
   <thead>
@@ -59,12 +61,12 @@ session_start();
       <th>trofee level</th>
       <th>trofee beschrijving</th>
     </tr>
-    <tr>
+    <tr class="trofee1">
       <td>Beginner</td>
       <td>Level 1</td>
       <td>Scoor tien punten</td>
     </tr>
-      
+
   </thead>
   <tbody>
   

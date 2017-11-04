@@ -27,10 +27,6 @@ var kans = function () {
 
 }
 
-
-
-
-
 function pickLocation() {
   var cols = floor(width/scl);
   var rows = floor(height/scl);
@@ -46,8 +42,8 @@ function spicklocation() {
 }
 
 
-
 setInterval(kans,3000);
+
 
 
 function draw() {
@@ -67,10 +63,10 @@ function draw() {
   s.update();
   s.show();
   s.bilal();
+  s.trofee();
 
 
-
-
+  
 
 
   fill(255, 50, 100);
@@ -78,16 +74,11 @@ function draw() {
 
 
   if (kdjesbk == 2) {
-    console.log("bay")
     fill(100,100,50);
     rect(snoep.x,snoep.y,scl,scl)
-  } else {
-    console.log("nee")
-  }
+  } 
 
 }
-
-
 
 
 

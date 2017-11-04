@@ -16,14 +16,19 @@ $connection = mysqli_connect($host, $user, $pass, $db, $port);
 
 $sql = "INSERT INTO users(username,password) VALUES('$naam','$wachtwoord')";
 
+if (isset($_POST["register-submit"])) {
+  if ($wachtwoord != $confirm_wachtwoord) {
+      echo "<script>alert('fout Wachtwoord of gebruikersnaam')</script>";
+  }
+  elseif ($wachtwoord == "" or $naam == "") {
+    echo "<script>alert('vul je gegevens')</script>";
+  }
+   else {
+    mysqli_query($connection,$sql);
+  }
 
-
-if ($wachtwoord != $confirm_wachtwoord or $naam == "" or $wachtwoord == "") {
-    echo "<script>alert('fout Wachtwoord of gebruikersnaam')</script>";
-} 
- else {
-  mysqli_query($connection,$sql);
 }
+
 
 
 
